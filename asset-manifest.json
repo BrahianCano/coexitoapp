@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/coexitoapp/static/js/main.be6d1dae.chunk.js",
+    "main.js.map": "/coexitoapp/static/js/main.be6d1dae.chunk.js.map",
+    "runtime-main.js": "/coexitoapp/static/js/runtime-main.9991c5b1.js",
+    "runtime-main.js.map": "/coexitoapp/static/js/runtime-main.9991c5b1.js.map",
+    "static/js/2.517f5f9c.chunk.js": "/coexitoapp/static/js/2.517f5f9c.chunk.js",
+    "static/js/2.517f5f9c.chunk.js.map": "/coexitoapp/static/js/2.517f5f9c.chunk.js.map",
+    "index.html": "/coexitoapp/index.html",
+    "precache-manifest.640e75e08fd5dccf485b85c58c655e75.js": "/coexitoapp/precache-manifest.640e75e08fd5dccf485b85c58c655e75.js",
+    "service-worker.js": "/coexitoapp/service-worker.js",
+    "static/js/2.517f5f9c.chunk.js.LICENSE.txt": "/coexitoapp/static/js/2.517f5f9c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9991c5b1.js",
+    "static/js/2.517f5f9c.chunk.js",
+    "static/js/main.be6d1dae.chunk.js"
+  ]
+}
