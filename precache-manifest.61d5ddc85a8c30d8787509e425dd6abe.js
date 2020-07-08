@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "50389b7fd61bb0d1b705d15d0c6ce051",
+    "revision": "1c1a034fc9e15df440752c81aa3558d0",
     "url": "/coexitoapp/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/coexitoapp/static/js/2.517f5f9c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e2a538764ae31d8dd5d1",
-    "url": "/coexitoapp/static/js/main.3be7ec66.chunk.js"
+    "revision": "5c82764010f69330fc2d",
+    "url": "/coexitoapp/static/js/main.dbef95b4.chunk.js"
   },
   {
     "revision": "bbb578aa58044fb1f276",
