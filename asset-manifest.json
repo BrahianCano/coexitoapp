@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/coexitoapp/static/js/main.be6d1dae.chunk.js",
-    "main.js.map": "/coexitoapp/static/js/main.be6d1dae.chunk.js.map",
+    "main.js": "/coexitoapp/static/js/main.3be7ec66.chunk.js",
+    "main.js.map": "/coexitoapp/static/js/main.3be7ec66.chunk.js.map",
     "runtime-main.js": "/coexitoapp/static/js/runtime-main.9991c5b1.js",
     "runtime-main.js.map": "/coexitoapp/static/js/runtime-main.9991c5b1.js.map",
     "static/js/2.517f5f9c.chunk.js": "/coexitoapp/static/js/2.517f5f9c.chunk.js",
     "static/js/2.517f5f9c.chunk.js.map": "/coexitoapp/static/js/2.517f5f9c.chunk.js.map",
     "index.html": "/coexitoapp/index.html",
-    "precache-manifest.9677cbd6aea16798adfda1c975e7bb08.js": "/coexitoapp/precache-manifest.9677cbd6aea16798adfda1c975e7bb08.js",
+    "precache-manifest.af8a7df24f350f3481bc517876255e33.js": "/coexitoapp/precache-manifest.af8a7df24f350f3481bc517876255e33.js",
     "service-worker.js": "/coexitoapp/service-worker.js",
     "static/js/2.517f5f9c.chunk.js.LICENSE.txt": "/coexitoapp/static/js/2.517f5f9c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9991c5b1.js",
     "static/js/2.517f5f9c.chunk.js",
-    "static/js/main.be6d1dae.chunk.js"
+    "static/js/main.3be7ec66.chunk.js"
   ]
 }
