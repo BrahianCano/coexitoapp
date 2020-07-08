@@ -10,9 +10,9 @@ function App() {
   return (
     <BrowserRouter>
      <Switch>
-       <Route exact path='/coexitoapp/' component={MainComponent}/>
-       <Route exact path='/coexitoapp/newclient' component={NewClientComponent}/>
-       <Route exact path='/coexitoapp/dashboard' component={DashboardClients}/>
+       <Route exact path='/' component={MainComponent}/>
+       <Route exact path='/newclient' component={NewClientComponent}/>
+       <Route exact path='/dashboard' component={DashboardClients}/>
      </Switch>
     </BrowserRouter>
   );
