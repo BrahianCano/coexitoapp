@@ -5,47 +5,36 @@ import moment from 'moment';
 import uniqid from 'uniqid';
 
 
-const FormClientComponent = () => {
+const FormUpdateComponent = (props) => {
 
      const { register, handleSubmit, errors } = useForm();
      const dateNow = moment().format('L');
 
-     const stateInitial = {
-          _id: "",
-          clientContact: "",
-          nit: "",
-          email: "",
-          contact: "",
-          phone: "",
-          valueSales: "0",
-          observation: "",
-          region: "MEDELLÍN",
-          ejecutive: "JUDY CANO",
-          date: dateNow
-     }
+     const [client, setClient] = useState(props.dataUpdate);
+     const [data] = useState(localStorage.getItem('datos') !== null ? JSON.parse(localStorage.getItem('datos')) : []);
 
-     const [client, setClient] = useState(stateInitial);
-     const [data, setData] = useState(localStorage.getItem('datos') !== null ? JSON.parse(localStorage.getItem('datos')) : []);
-
-     const onSubmit = (dataForm, e) => {
-          setData([...data,
-               client]
-          )
+     const onSubmit = () => {
+          data[indexClient] = client;
+          localStorage.setItem('datos', JSON.stringify(data));
           Swal.fire({
                position: 'top-end',
                icon: 'success',
-               title: 'Cliente agregado con exito.',
+               title: 'Datos actualizados con exito con exito.',
                showConfirmButton: false,
                timer: 1200
           })
-          setClient(stateInitial);
-          e.target.reset();
      }
 
-     useEffect(() => {
-          localStorage.setItem('datos', JSON.stringify(data));
-     }, [data])
+     const indexClient = data.findIndex(function (elem) {
+          return elem._id === client._id
+     });
 
+     useEffect(() => {
+          setClient({
+               ...client,
+               date: dateNow
+          })
+     }, [])
 
      return (
           <div className="container">
@@ -164,7 +153,7 @@ const FormClientComponent = () => {
                               {errors.observation && <span className="badge badge-danger">Este campo es obligatorio</span>}
                          </div>
                          <div className="col">
-                              <input className="btn btn-primary btn-lg btn-block" type="submit" value="Guardar cliente" />
+                              <input className="btn btn-primary btn-lg btn-block" type="submit" value="Actualizar datos" />
                          </div>
                     </div>
                </form>
@@ -172,4 +161,4 @@ const FormClientComponent = () => {
      );
 }
 
-export default FormClientComponent;
+export default FormUpdateComponent;

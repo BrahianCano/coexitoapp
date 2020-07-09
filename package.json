@@ -1,5 +1,5 @@
 {
-  "homepage":"https://brahiancano.github.io/coexitoapp",
+  "homepage": "https://brahiancano.github.io/coexitoapp",
   "name": "coexito-app",
   "version": "0.1.0",
   "private": true,
@@ -17,7 +17,8 @@
     "react-hook-form": "^6.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "sweetalert2": "^9.15.2"
+    "sweetalert2": "^9.15.2",
+    "uniqid": "^5.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

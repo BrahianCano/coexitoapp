@@ -1,31 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import { useHistory, withRouter } from 'react-router-dom';
+
 import MUIDataTable from "mui-datatables";
-import Swal from 'sweetalert2';
 import moment from 'moment';
 
 
 const ListClients = () => {
 
+     const history = useHistory();
      const dateNow = moment().format('L');
-     const [data, setData] = useState(localStorage.getItem('datos') !== null ? JSON.parse(localStorage.getItem('datos')) : []);
-
-     useEffect(() => {
-          if (data !== []) {
-               setData(JSON.parse(localStorage.getItem('datos')))
-          } else {
-               Swal.fire({
-                    position: 'top-end',
-                    icon: 'error',
-                    title: 'No tienes usuario creados',
-                    showConfirmButton: false,
-                    timer: 1200
-               })
-          }
-     }, [])
+     const [data] = useState(localStorage.getItem('datos') !== null ? JSON.parse(localStorage.getItem('datos')) : []);
 
      const columns = [
+          {
+               label: "ID", name: "_id", options: {
+                    display: 'false'
+               }
+          },
           { label: "FECHA", name: "date" },
           { label: "REGIONAL", name: "region" },
+          { label: "CLIENTE", name: "clientContact" },
           { label: "NIT", name: "nit" },
           { label: "VALORES VENTA", name: "valueSales" },
           { label: "CONTACTO", name: "contact" },
@@ -33,7 +27,6 @@ const ListClients = () => {
           { label: "OBSERVACIONES", name: "observation" },
           { label: "EJECUTIVO", name: "ejecutive" },
      ];
-
      const options = {
           filterType: 'checkbox',
           responsive: "standard",
@@ -42,8 +35,8 @@ const ListClients = () => {
                separator: ';'
           },
           onRowClick: function (rowData, rowMeta) {
-               console.log(rowMeta)
-               console.log(rowData)
+               const id = rowData[0]
+               history.push('dashboard/' + id)
           }
      };
 
@@ -59,4 +52,4 @@ const ListClients = () => {
      );
 }
 
-export default ListClients;
+export default withRouter(ListClients);

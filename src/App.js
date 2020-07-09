@@ -3,7 +3,8 @@ import { BrowserRouter, Route, Switch} from 'react-router-dom'
 
 import MainComponent from './pages/Main';
 import NewClientComponent from './pages/NewClient';
-import DashboardClients from './pages/DashboardClients';
+import DashboardClientsComponent from './pages/DashboardClients';
+import UpdateClientComponent from './pages/UpdateClient';
 
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
      <Switch>
        <Route exact path='/coexitoapp/' component={MainComponent}/>
        <Route exact path='/coexitoapp/newclient' component={NewClientComponent}/>
-       <Route exact path='/coexitoapp/dashboard' component={DashboardClients}/>
+       <Route exact path='/coexitoapp/dashboard' component={DashboardClientsComponent}/>
+       <Route exact path='/coexitoapp/dashboard/:id' component={UpdateClientComponent}/>
      </Switch>
     </BrowserRouter>
   );
