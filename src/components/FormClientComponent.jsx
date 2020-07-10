@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
-import Swal from 'sweetalert2';
 import moment from 'moment';
 import uniqid from 'uniqid';
 
 
-const FormClientComponent = () => {
+const FormClientComponent = ({ onSubmitNewCLient }) => {
 
      const { register, handleSubmit, errors } = useForm();
      const dateNow = moment().format('L');
@@ -23,35 +22,18 @@ const FormClientComponent = () => {
           ejecutive: "JUDY CANO",
           date: dateNow
      }
-
      const [client, setClient] = useState(stateInitial);
-     const [data, setData] = useState(localStorage.getItem('datos') !== null ? JSON.parse(localStorage.getItem('datos')) : []);
-
-     const onSubmit = (dataForm, e) => {
-          setData([...data,
-               client]
-          )
-          Swal.fire({
-               position: 'top-end',
-               icon: 'success',
-               title: 'Cliente agregado con exito.',
-               showConfirmButton: false,
-               timer: 1200
-          })
-          setClient(stateInitial);
-          e.target.reset();
-     }
-
-     useEffect(() => {
-          localStorage.setItem('datos', JSON.stringify(data));
-     }, [data])
-
 
      return (
           <div className="container">
-               <form onSubmit={handleSubmit(onSubmit)}>
+               <form onSubmit={
+                    handleSubmit(() => {
+                         onSubmitNewCLient(client);
+                         setClient(stateInitial);
+                    })
+               }>
                     <div className="row m-3">
-                         <div className="col">
+                         <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                               <input type="text" className="form-control" placeholder="CLIENTE"
                                    name="clientContact"
                                    value={client.clientContact}
@@ -65,7 +47,7 @@ const FormClientComponent = () => {
                               />
                               {errors.clientContact && <span className="badge badge-danger">Este campo es obligatorio</span>}
                          </div>
-                         <div className="col">
+                         <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                               <input type="number" className="form-control" placeholder="NIT"
                                    name="nit"
                                    value={client.nit}
@@ -83,7 +65,7 @@ const FormClientComponent = () => {
                          </div>
                     </div>
                     <div className="row m-3">
-                         <div className="col">
+                         <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                               <input type="email" className="form-control" placeholder="CORREO"
                                    name="email"
                                    value={client.email}
@@ -97,7 +79,7 @@ const FormClientComponent = () => {
                               />
                               {errors.email && <span className="badge badge-danger">Este campo es obligatorio</span>}
                          </div>
-                         <div className="col">
+                         <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                               <input type="text" className="form-control" placeholder="NOMBRE CONTACTO"
                                    name="contact"
                                    value={client.contact}
@@ -113,7 +95,7 @@ const FormClientComponent = () => {
                          </div>
                     </div>
                     <div className="row m-3">
-                         <div className="col input-group">
+                         <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 input-group">
                               <div className="input-group-prepend">
                                    <span className="input-group-text">+57</span>
                               </div>
@@ -130,7 +112,7 @@ const FormClientComponent = () => {
                               />
                               {errors.phone && <span className="badge badge-danger">Este campo es obligatorio</span>}
                          </div>
-                         <div className="col input-group">
+                         <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 input-group">
                               <div className="input-group-prepend">
                                    <span className="input-group-text">$</span>
                               </div>
@@ -149,7 +131,7 @@ const FormClientComponent = () => {
                          </div>
                     </div>
                     <div className="row m-3">
-                         <div className="col">
+                         <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                               <textarea className="form-control" placeholder="OBSERVACIONES"
                                    name="observation"
                                    value={client.observation}
@@ -163,7 +145,7 @@ const FormClientComponent = () => {
                               />
                               {errors.observation && <span className="badge badge-danger">Este campo es obligatorio</span>}
                          </div>
-                         <div className="col">
+                         <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                               <input className="btn btn-primary btn-lg btn-block" type="submit" value="Guardar cliente" />
                          </div>
                     </div>

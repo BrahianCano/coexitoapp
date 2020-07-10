@@ -25,7 +25,7 @@ const UpdateClientComponent = () => {
                <div className="jumbotron">
                     <h1 className="display-4">Actualizar datos</h1>
                     <p className="lead">Este cliente sera actualizado de manera local, es decir que solo cambiara en este computador</p>
-                    <Link className="btn btn-secondary" to="/coexitoapp/dashboard" role="button">Gestionar mis clientes</Link>
+                    <Link className="btn btn-secondary" to="/dashboard" role="button">Gestionar mis clientes</Link>
                </div>
                <h4 className="text-center m-5">COMPLETA TODOS LOS DATOS DEL FORMULARIO</h4>
                <FormUpdateComponent dataUpdate={filterClient[0]} />

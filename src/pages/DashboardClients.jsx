@@ -13,7 +13,7 @@ const DashboardClients = () => {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                          <div className="navbar-nav">
-                              <Link className="nav-item btn btn-primary" to="/coexitoapp/newclient">Agrega un nuevo cliente<span className="sr-only">(current)</span></Link>
+                              <Link className="nav-item btn btn-primary" to="/newclient">Agrega un nuevo cliente<span className="sr-only">(current)</span></Link>
                          </div>
                     </div>
                </nav>

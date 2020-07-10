@@ -11,10 +11,10 @@ function App() {
   return (
     <BrowserRouter>
      <Switch>
-       <Route exact path='/coexitoapp/' component={MainComponent}/>
-       <Route exact path='/coexitoapp/newclient' component={NewClientComponent}/>
-       <Route exact path='/coexitoapp/dashboard' component={DashboardClientsComponent}/>
-       <Route exact path='/coexitoapp/dashboard/:id' component={UpdateClientComponent}/>
+       <Route exact path='/' component={MainComponent}/>
+       <Route exact path='/newclient' component={NewClientComponent}/>
+       <Route exact path='/dashboard' component={DashboardClientsComponent}/>
+       <Route exact path='/dashboard/:id' component={UpdateClientComponent}/>
      </Switch>
     </BrowserRouter>
   );
@@ -22,4 +22,3 @@ function App() {
 
 export default App;
 
-//https://www.youtube.com/watch?v=M4JUuuM6qg8

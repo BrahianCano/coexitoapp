@@ -40,7 +40,7 @@ const FormUpdateComponent = (props) => {
           <div className="container">
                <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="row m-3">
-                         <div className="col">
+                         <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                               <input type="text" className="form-control" placeholder="CLIENTE"
                                    name="clientContact"
                                    value={client.clientContact}
@@ -54,7 +54,7 @@ const FormUpdateComponent = (props) => {
                               />
                               {errors.clientContact && <span className="badge badge-danger">Este campo es obligatorio</span>}
                          </div>
-                         <div className="col">
+                         <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                               <input type="number" className="form-control" placeholder="NIT"
                                    name="nit"
                                    value={client.nit}
@@ -72,7 +72,7 @@ const FormUpdateComponent = (props) => {
                          </div>
                     </div>
                     <div className="row m-3">
-                         <div className="col">
+                         <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                               <input type="email" className="form-control" placeholder="CORREO"
                                    name="email"
                                    value={client.email}
@@ -86,7 +86,7 @@ const FormUpdateComponent = (props) => {
                               />
                               {errors.email && <span className="badge badge-danger">Este campo es obligatorio</span>}
                          </div>
-                         <div className="col">
+                         <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                               <input type="text" className="form-control" placeholder="NOMBRE CONTACTO"
                                    name="contact"
                                    value={client.contact}
@@ -102,7 +102,7 @@ const FormUpdateComponent = (props) => {
                          </div>
                     </div>
                     <div className="row m-3">
-                         <div className="col input-group">
+                         <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 input-group">
                               <div className="input-group-prepend">
                                    <span className="input-group-text">+57</span>
                               </div>
@@ -119,7 +119,7 @@ const FormUpdateComponent = (props) => {
                               />
                               {errors.phone && <span className="badge badge-danger">Este campo es obligatorio</span>}
                          </div>
-                         <div className="col input-group">
+                         <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 input-group">
                               <div className="input-group-prepend">
                                    <span className="input-group-text">$</span>
                               </div>
@@ -138,7 +138,7 @@ const FormUpdateComponent = (props) => {
                          </div>
                     </div>
                     <div className="row m-3">
-                         <div className="col">
+                         <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                               <textarea className="form-control" placeholder="OBSERVACIONES"
                                    name="observation"
                                    value={client.observation}
@@ -152,7 +152,7 @@ const FormUpdateComponent = (props) => {
                               />
                               {errors.observation && <span className="badge badge-danger">Este campo es obligatorio</span>}
                          </div>
-                         <div className="col">
+                         <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                               <input className="btn btn-primary btn-lg btn-block" type="submit" value="Actualizar datos" />
                          </div>
                     </div>
