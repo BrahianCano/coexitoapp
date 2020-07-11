@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useForm } from "react-hook-form";
+import { useHistory, withRouter } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import moment from 'moment';
 import uniqid from 'uniqid';
 
 
 const FormUpdateComponent = (props) => {
+     const history = useHistory();
 
      const { register, handleSubmit, errors } = useForm();
      const dateNow = moment().format('L');
@@ -17,12 +19,15 @@ const FormUpdateComponent = (props) => {
           data[indexClient] = client;
           localStorage.setItem('datos', JSON.stringify(data));
           Swal.fire({
-               position: 'top-end',
+               position: 'center',
                icon: 'success',
-               title: 'Datos actualizados con exito con exito.',
+               title: 'Datos actualizados con exito.',
                showConfirmButton: false,
                timer: 1200
           })
+          setTimeout(() => {
+               history.goBack();
+          }, 1400);
      }
 
      const indexClient = data.findIndex(function (elem) {
@@ -153,7 +158,7 @@ const FormUpdateComponent = (props) => {
                               {errors.observation && <span className="badge badge-danger">Este campo es obligatorio</span>}
                          </div>
                          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                              <input className="btn btn-primary btn-lg btn-block" type="submit" value="Actualizar datos" />
+                              <input className="btn btn-success btn-lg btn-block" type="submit" value="Actualizar datos" />
                          </div>
                     </div>
                </form>
@@ -161,4 +166,4 @@ const FormUpdateComponent = (props) => {
      );
 }
 
-export default FormUpdateComponent;
+export default withRouter(FormUpdateComponent);

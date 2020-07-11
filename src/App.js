@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch} from 'react-router-dom'
+import './app.css'
 
 import MainComponent from './pages/Main';
 import NewClientComponent from './pages/NewClient';

@@ -41,7 +41,10 @@ const ListClients = () => {
      };
 
      return (
-          <div className="m-5">
+          <div className="m-2 mt-5">
+               <div class="alert alert-primary" role="alert">
+                    Si quieres modificar los datos de un cliente, da clic en su fila.
+               </div>
                <MUIDataTable
                     title={"Lista de clientes"}
                     data={data}

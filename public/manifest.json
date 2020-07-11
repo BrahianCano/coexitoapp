@@ -1,7 +1,7 @@
 {
      "short_name": "CoexitoApp",
      "name": "CoexitoApp",
-     "description": "Descripcion de la aplicacion web",
+     "description": "Guarda tus clientes de manera local y exportalos en una lista de excel.",
      "icons": [
        {
          "src": "favicon.ico",

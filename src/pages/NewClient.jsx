@@ -13,7 +13,7 @@ const NewClient = () => {
                client]
           )
           Swal.fire({
-               position: 'top-end',
+               position: 'center',
                icon: 'success',
                title: 'Cliente agregado con exito.',
                showConfirmButton: false,
@@ -30,10 +30,10 @@ const NewClient = () => {
           <div>
                <div className="jumbotron">
                     <h1 className="display-4">Agrega un nuevo cliente</h1>
-                    <p className="lead">Este cliente sera almacenado de manera local, es decir que solo se mostrara en este computador</p>
-                    <Link className="btn btn-secondary" to="/dashboard" role="button">Gestionar mis clientes</Link>
+                    <p className="lead">Este cliente sera almacenado únicamente en la memoria del navegador de este dispositivo.</p>
+                    <Link className="btn btn-dark" to="/dashboard" role="button"> <i class="fas fa-file-csv"></i> Gestionar mis clientes</Link>
                </div>
-               <h4 className="text-center m-5">COMPLETA TODOS LOS DATOS DEL FORMULARIO</h4>
+               <h4 className="text-center m-5">COMPLETA LOS DATOS DEL FORMULARIO</h4>
                <FormClientComponent onSubmitNewCLient={onSubmitNewCLient} />
           </div>
      );

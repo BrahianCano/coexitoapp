@@ -146,7 +146,7 @@ const FormClientComponent = ({ onSubmitNewCLient }) => {
                               {errors.observation && <span className="badge badge-danger">Este campo es obligatorio</span>}
                          </div>
                          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                              <input className="btn btn-primary btn-lg btn-block" type="submit" value="Guardar cliente" />
+                              <input className="btn btn-success btn-lg btn-block" type="submit" value="Guardar cliente" />
                          </div>
                     </div>
                </form>
